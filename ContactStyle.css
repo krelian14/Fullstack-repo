@@ -1,0 +1,126 @@
+body {
+  background-image: url(/Images/Blue\ tint\ BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url(/Fonts/International.ttf) format('truetype');
+  font-weight: normal;
+  font-weight: normal;
+}
+
+.navdiv{
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+li a{
+  text-decoration: none;
+  color: white;
+  padding-right: 50px;
+  font-size: 20px;
+  font-family: 'MyCustomFont', serif;
+  letter-spacing: 1px;
+}
+
+li a:hover{
+  text-shadow: 0px 0px 20px white, 0px 0px 20px , 0px 0px 20px yellow;
+  transition: ease-in 0.3s;
+}
+
+.form-container {
+  width: 400px;
+  margin: 70px auto;
+  background-color: rgba(6, 42, 49, 0.486);
+  padding: 20px 20px 70px 20px;
+  border-radius: 10px;
+  font-family: 'MyCustomFont', serif;
+  letter-spacing: 10px;
+  font-size: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+form input, form textarea {
+  padding: 8px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'MyCustomFont', serif;
+}
+
+.ember-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ember {
+  position: absolute;
+  bottom: -20px;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(83, 31, 197, 0.767);
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(49, 30, 255, 0.486), 0 0 10px rgb(15, 1, 171), 0 0 10px rgb(0, 21, 160);
+  animation: floatEmber 6s linear infinite;
+}
+
+.ember:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.ember:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+.ember:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+.ember:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+.ember:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes floatEmber {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}

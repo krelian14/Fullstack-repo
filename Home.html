@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLSTACK : Home</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="index.html" title="Redirect to landing page!">
+                    <img src="/Images/new logo - darkside_transparent.png" height="auto" width="120px">
+                </a>
+            </div>
+            <ul class="navbar-links">
+                    <li class="sound-hover"><a href="Home.html"  class="fade" title="Redirect to Home page!">Home</a></li>
+                    <li class="sound-hover"><a href="ContactUs.html" class="fade" title="Contact Us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-cont">
+        <h1>VISION</h1>
+        <p>"The unexamined life is not worth living."</p>
+        <br>
+        <p>&nbsp; <b>FULLSTACK</b> is an organization that vows to examine all aspects in web system,
+            therefore making our life-long learning worthy for the life we are currently living.  
+        </p>
+        <br>
+        <p>We think therefore <button class="sound-hover"><a href="profile.html" class="fade"><u>We are</u>...</a></button></p>
+    </div>
+
+    <div class="ember-container">
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+    </div>
+
+    <script>
+        const hoverSound = new Audio('/SFX/CompUI.mp3');
+
+        const hoverItems = document.querySelectorAll('.sound-hover');
+
+        hoverItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
